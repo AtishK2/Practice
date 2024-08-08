@@ -15,6 +15,7 @@ public class BrowserWithSingletonLock {
             }
         }
         return instance;
+
     }
 
     public void printMessage(){
