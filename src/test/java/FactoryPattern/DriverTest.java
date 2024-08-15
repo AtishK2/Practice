@@ -7,12 +7,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class DriverTest {
     WebDriver webDriver;
     @BeforeTest
     public void setUp() {
-        webDriver = DriverFactory.getDriverManager("Hedge").getDriver();
+        webDriver = DriverFactory.getDriverManager("chrome").getDriver();
         webDriver.get("https://www.google.com");
+        webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @Test
