@@ -7,7 +7,6 @@ public class EdgeDriverManager  implements DriverManager {
 
     @Override
     public WebDriver getDriver() {
-        System.setProperty("webdriver.edge.driver", driverPath+"msedgedriver.exe");
         return new EdgeDriver();
     }
 }

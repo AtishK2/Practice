@@ -15,9 +15,8 @@ public class DriverFactory {
             case "edge":
                 System.setProperty("webdriver.edge.driver", driverPath + "msedgedriver.exe");
                 return new EdgeDriverManager();
-            case "default":
-                throw new IllegalArgumentException("Please enter correct browser ie. chrome, firefox, edge. There's no support added for browser " + browserType);
+            default:
+                throw new IllegalArgumentException("Please enter correct browser ie. chrome, firefox, edge. There's no support added for browser: " + browserType);
         }
-        return null;
     }
 }

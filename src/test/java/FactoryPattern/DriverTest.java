@@ -7,13 +7,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.Objects;
-
 public class DriverTest {
     WebDriver webDriver;
     @BeforeTest
-    public void setUp(){
-        webDriver = Objects.requireNonNull(DriverFactory.getDriverManager("edge")).getDriver();
+    public void setUp() {
+        webDriver = DriverFactory.getDriverManager("Hedge").getDriver();
         webDriver.get("https://www.google.com");
     }
 
