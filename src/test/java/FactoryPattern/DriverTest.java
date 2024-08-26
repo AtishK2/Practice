@@ -13,7 +13,7 @@ public class DriverTest {
     WebDriver webDriver;
     @BeforeTest
     public void setUp() {
-        webDriver = DriverFactory.getDriverManager("chrome").getDriver();
+        webDriver = DriverFactory.getDriverManager("edge").getDriver();
         webDriver.get("https://www.google.com");
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
