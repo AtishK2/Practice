@@ -1,4 +1,4 @@
-package FactoryPattern;
+package Utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,11 +9,13 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+import static Utils.DriverFactory.getDriverManager;
+
 public class DriverTest {
     WebDriver webDriver;
     @BeforeTest
     public void setUp() {
-        webDriver = DriverFactory.getDriverManager("edge").getDriver();
+        webDriver = getDriverManager("chrome").getDriver();
         webDriver.get("https://www.google.com");
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

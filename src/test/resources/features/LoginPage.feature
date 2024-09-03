@@ -4,9 +4,7 @@ Feature: Find Homestays and Villa
   Given User is on homepage
   When User clicks on City textbox
   And enters "Thane" City
-#  Then User should be able to click on search result
-
-
+  Then User should be able to click on search result
 
 
 #Feature: Search Homestays and Villas on MakeMyTrip

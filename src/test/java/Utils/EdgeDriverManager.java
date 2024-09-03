@@ -1,4 +1,4 @@
-package FactoryPattern;
+package Utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class EdgeDriverManager  implements DriverManager {
+public class EdgeDriverManager implements DriverManager {
 
     @Override
     public WebDriver getDriver() {

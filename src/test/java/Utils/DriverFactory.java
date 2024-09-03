@@ -1,4 +1,4 @@
-package FactoryPattern;
+package Utils;
 
 public class DriverFactory {
 
